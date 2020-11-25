@@ -3,78 +3,112 @@
 
 
 <head>
-	<a href="file:///Users/ryan.moffat/Desktop/Git_Hub_Repo/Year_10_Design/Demo_Programs/CardioFitness.html">
-	Cardio Fitness	
-</a>
-
-	<a href="file:///Users/ryan.moffat/Desktop/Git_Hub_Repo/Year_10_Design/Demo_Programs/HealthyEating.html">
-	Eating	
-	</a>
-
-	<a href="file:///Users/ryan.moffat/Desktop/Git_Hub_Repo/Year_10_Design/Demo_Programs/Programbuilder.html">	
-	Build a program 
-	</a>			
 
 	<title>Home Page</title>
-<div>
-<h1 style="background-color: gray">
-	Your Daily Health And Fitness
-
-</h1>
-
- <h2 style="background-color: Tomato">
- 	Build A Program
- </h2>
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
 
-<p> Full Name: </p>
+	<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="CardioFitness.html">Cardio Fitness</a></li>
+        <li><a href="HealthyEating.html">Eating</a></li>
+        <li><a href="Programbuilder.html">Build A Program</a></li>
+      </ul>
+    </div>
+  </nav>
+        
+	<div id="login">
+	
+		<div class="container">
+				
+			<h1 class="red lighten-2 class white-text">Your Daily Health And Fitness</h1>
 
-<input type="text" id ="fname">
+			<h2 class="grey darken-">Build A Program</h2>
 
-<P> Password: </P>
+			<p> Full Name: </p>
 
-<input type="text" id ="lname">
+			<input type="text" id ="user">
 
+			<p> Password: </p>
 
-<script>
-	var fname = document.getElementaryById("fname").value
-	 console.log(fname)
-
-	 var lname = document.getElementaryById("lname").value
-	 console.log(lname)
-	 
-	 fetch("https://jsonplaceholder.typicode.com/photos")
-	 .then((resp) => resp.json()) // Transform the data into json
-	 .then(function(data) { 
-	 	//Create and append the li's 
+			<input type="text" id ="password">
 
 
-
-	 }
-
-
+			<a id="loginbtn" class="waves-effect waves-light btn-large"><i class="material-icons left">fitness_center</i>Login</a>
+			
 
 
-</script>
+			<a class="waves-effect waves-light btn-large"><i class="material-icons left">send</i>Sign up</a>
+			
+			
 
-<button 
-style="background-color: dodgerblue"
+			
+		</div>
+	</div>
+	<div id="datainput" style = "display: none;">
+		<div class="container">
+			<h1>data</h1>
 
-type="button">Login
-</button>
-<h3>
+			<a id = "logout" class="waves-effect waves-light btn-large"><i class="material-icons left">send</i>Logout</a>
+			
+		</div>		
+	</div>
 
-<div>
-	<a href="file:///Users/ryan.moffat/Desktop/Git_Hub_Repo/Year_10_Design/Demo_Programs/SignUp.html">
-<button  
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-style="background-color: red"
-type="button"> Sign Up 
-</button>	
-</h3>
-</a>
-</div>
+		<script>
+
+			var users = ["user1","user2","user3"]
+			var passwords = ["pword1","pword2","pword3"]
+			var activeUser = ""
+
+			var datainput=document.getElementById("datainput")
+			var login=document.getElementById("login")
+			var loginbtn=document.getElementById("loginbtn")
+			var logoutbtn = document.getElementById("logout")
+			var user = document.getElementById("user")
+			var password = document.getElementById("password")
+
+
+			function logoutfnc() {
+				login.style.display="block"
+				datainput.style.display="none"
+			}
+
+			function loginfnc (){
+				console.log("running")
+				//Step 1: I have to access the data entered in the text boxs
+				u = user.value;
+				p = password.value;
+		
+				//Step 2: Loop through users to look for u
+				for (i = 0; i < users.length; i = i + 1) {
+					if (users[i] === u) {
+						console.log("GOT IT!")
+						//Check if the passwor is correct
+						if (passwords[i] === p) {
+							activeUser = u
+							login.style.display="none"
+							datainput.style.display="block"
+						}
+					}
+
+				}
+				//store text from iduser store text from idpassword//
+				
+			}
+
+			loginbtn.addEventListener("click",loginfnc)
+			logoutbtn.addEventListener("click",logoutfnc)
+		</script>
+
 
 </body>
 </html>
