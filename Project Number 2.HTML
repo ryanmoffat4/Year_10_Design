@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html style="background-color: LightGray">
+
+
+<head>
+
+	<title>Sports at UCC</title>
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+ 
+
+
+        
+
+	<nav class="blue">
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+       
+        <li><a class='dropdown-trigger btn orange' href='#' data-target='dropdown_fall'>Fall</a></li>
+
+        <li><a class='dropdown-trigger btn blue' href='#' data-target='dropdown_winter'>Winter</a></li>
+
+        
+         <li><a class='dropdown-trigger btn green'  href='#' data-target='dropdown_spring'>Spring</a></li>
+
+       
+      </ul>
+    </div>
+  </nav>
+
+  <h1 style="color:darkblue">Ucc Athletics</h1>
+
+
+	   <div class="row">
+	      <div class="col s12 m6 l4">
+	      	<img class="responsive-img materialboxed"  src="https://bbk12e1-cdn.myschoolcdn.com/1142/photo/orig_photo893255_9829743.jpg?">
+</div>
+	      <div class="col s12 m6 l4">
+	      	<img class="responsive-img materialboxed"  src="https://bbk12e1-cdn.myschoolcdn.com/1142/photo/orig_photo893255_9829877.jpg?">
+</div>
+	      <div class="col s12 m6 l4">
+	      	<img class= "responsive-img materialboxed"  src="https://bbk12e1-cdn.myschoolcdn.com/1142/photo/orig_photo893255_9848383.jpg?">
+	      </div>
+	   </div>
+
+  <a style="color:black" href="https://www.ucc.on.ca/athletics/all-star-alumni">
+  	The list of Old Boys who have gone on to successful careers in their fields is impressively long and constantly growing. There are currently 10,000 Old Boys in 75 countries around the world. Many often reunite with old friends at branch events in Canada and abroad. Others return to UCC for speaking engagements to share their experiences with the next generation. Our alumni ranks boast 10 Olympians and hockey pros including George Mara ’41, captain of the 1948 Olympic gold medal-winning Canadian hockey team and director of Maple Leaf Gardens. It’s for him that our Mara Rink in the William Wilder ’40 Arena & Sports Complex is named. Here are just some of our alumni who've excelled in athletics. 
+  	
+</a>
+        
+	 <!-- Dropdown Trigger -->
+
+	<ul id='dropdown_winter' class='dropdown-content'>
+    <li><a href="#!">Hockey</a></li>
+    <li><a href="#!">Basketball</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Swim</a></li>
+    <li><a href="#!"><i class="material-icons">view_module</i>Squash</a></li>
+  </ul>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown_spring' class='dropdown-content'>
+    <li><a href="#!">Badminton</a></li>
+    <li><a href="rugby.html">Cricket</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">Baseball</a></li>
+    <li><a href="#!">Rugby</a></li>
+    <li><a href="#!">Tennis</a></li>
+    <li><a href="#!">Softball</a></li>
+    <li><a href="#!">Track and Field</a></li>
+    <li><a href="#!"><i class="material-icons">view_module</i>Golf</a></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>Lacrosse</a></li>
+  </ul>
+        
+	<ul id='dropdown_fall' class='dropdown-content'>
+		<li><a href="#!">Cross Country</a></li>
+		<li><a href="rugby.html">Football</a></li>
+		<li class="divider" tabindex="-1"></li>
+		<li><a href="#!">Field hockey</a></li>
+		<li><a href="#!"><i class="material-icons">view_module</i>Volleyball</a></li>
+		<li><a href="#!"><i class="material-icons">cloud</i>Soccer</a></li>
+	</ul>
+
+ <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+	<script> 
+
+	document.addEventListener('DOMContentLoaded', function() {
+   	 var elems = document.querySelectorAll('.materialboxed');
+    	var instances = M.Materialbox.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+
+		document.addEventListener('DOMContentLoaded', function() {
+			options={hover: true, closeOnClick: false}
+			var elems = document.querySelectorAll('.dropdown-trigger');
+			var instances = M.Dropdown.init(elems, options);
+		});
+	</script>
+
+</body>
+</html>
